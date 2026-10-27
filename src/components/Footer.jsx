@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative py-16 sm:py-24 border-t border-pink-500/10 bg-gradient-to-b from-transparent to-[#05020d] text-center px-4 overflow-hidden">
+    <footer className="relative pt-12 pb-28 sm:py-24 border-t border-pink-500/10 bg-gradient-to-b from-transparent to-[#05020d] text-center px-4 overflow-hidden">
       {/* Background starlight accent */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-pink-600/10 rounded-full blur-[120px] pointer-events-none" />
 

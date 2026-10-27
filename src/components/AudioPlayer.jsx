@@ -60,7 +60,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end max-w-[calc(100vw-1.5rem)]">
       {/* Hidden Audio Tag */}
       <audio
         ref={audioRef}
@@ -71,14 +71,14 @@ export default function AudioPlayer() {
 
       {/* Expanded Control Popup */}
       {showControls && (
-        <div className="mb-3 p-4 rounded-2xl glass-card border border-pink-400/20 shadow-2xl backdrop-blur-xl w-64 text-xs animate-in fade-in slide-in-from-bottom-2 duration-300">
-          <div className="flex items-center gap-3 mb-3">
-            <div className={`w-8 h-8 rounded-full bg-pink-500/20 border border-pink-400/30 flex items-center justify-center text-pink-300 ${isPlaying ? 'animate-spin' : ''}`}>
-              <Disc className="w-4 h-4" />
+        <div className="mb-2.5 p-3.5 sm:p-4 rounded-2xl glass-card border border-pink-400/20 shadow-2xl backdrop-blur-xl w-[calc(100vw-2rem)] max-w-[280px] sm:w-64 text-xs animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <div className="flex items-center gap-2.5 mb-2.5">
+            <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-pink-500/20 border border-pink-400/30 flex items-center justify-center text-pink-300 shrink-0 ${isPlaying ? 'animate-spin' : ''}`}>
+              <Disc className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
             <div className="overflow-hidden">
-              <p className="font-medium text-pink-100 truncate">{siteConfig.audio.title}</p>
-              <p className="text-pink-300/60 text-[11px] truncate">{siteConfig.audio.artist}</p>
+              <p className="font-medium text-pink-100 truncate text-[11px] sm:text-xs">{siteConfig.audio.title}</p>
+              <p className="text-pink-300/60 text-[10px] sm:text-[11px] truncate">{siteConfig.audio.artist}</p>
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function AudioPlayer() {
           <div className="flex items-center gap-2 pt-2 border-t border-white/5">
             <button
               onClick={toggleMute}
-              className="text-pink-300/80 hover:text-pink-200 transition-colors"
+              className="text-pink-300/80 hover:text-pink-200 transition-colors p-1"
               aria-label={isMuted ? "Unmute audio" : "Mute audio"}
             >
               {isMuted || volume === 0 ? (
@@ -104,7 +104,7 @@ export default function AudioPlayer() {
               onChange={handleVolumeChange}
               className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-pink-400"
             />
-            <span className="text-[10px] text-pink-300/70 w-7 text-right">
+            <span className="text-[10px] text-pink-300/70 w-6 text-right">
               {isMuted ? '0%' : `${Math.round(volume * 100)}%`}
             </span>
           </div>
@@ -118,19 +118,19 @@ export default function AudioPlayer() {
       )}
 
       {/* Floating Pill Toggle Button */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1.5 sm:gap-2">
         <button
           onClick={() => setShowControls((prev) => !prev)}
-          className="p-2.5 rounded-full glass-card border border-pink-400/20 text-pink-300 hover:text-pink-100 hover:border-pink-400/40 transition-all shadow-lg active:scale-95"
+          className="p-2 sm:p-2.5 rounded-full glass-card border border-pink-400/20 text-pink-300 hover:text-pink-100 hover:border-pink-400/40 transition-all shadow-lg active:scale-95"
           title="Audio Settings"
           aria-label="Toggle audio player controls"
         >
-          <Music className="w-4 h-4" />
+          <Music className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         </button>
 
         <button
           onClick={togglePlay}
-          className={`group flex items-center gap-2.5 px-4 py-2.5 rounded-full glass-card border transition-all duration-300 shadow-xl active:scale-95 ${
+          className={`group flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full glass-card border transition-all duration-300 shadow-xl active:scale-95 ${
             isPlaying
               ? 'border-pink-400/50 bg-pink-950/50 text-pink-200 box-glow'
               : 'border-pink-400/20 hover:border-pink-400/40 text-pink-300/80 hover:text-pink-100'
@@ -140,18 +140,18 @@ export default function AudioPlayer() {
           {isPlaying ? (
             <>
               <Pause className="w-3.5 h-3.5 text-pink-400 fill-current animate-pulse" />
-              <span className="text-xs font-medium tracking-wide">Playing Our Melody</span>
+              <span className="text-[11px] sm:text-xs font-medium tracking-wide">Playing</span>
               {/* Animated waveform bars */}
-              <div className="flex items-end gap-0.5 h-3.5 ml-1">
-                <span className="w-0.5 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="w-0.5 h-3.5 bg-pink-300 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="w-0.5 h-2.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+              <div className="flex items-end gap-0.5 h-3 ml-0.5">
+                <span className="w-0.5 h-1.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <span className="w-0.5 h-3 bg-pink-300 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <span className="w-0.5 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
               </div>
             </>
           ) : (
             <>
               <Play className="w-3.5 h-3.5 text-pink-400/80 fill-current" />
-              <span className="text-xs font-medium tracking-wide">Play Music (Off)</span>
+              <span className="text-[11px] sm:text-xs font-medium tracking-wide">Music (Off)</span>
             </>
           )}
         </button>

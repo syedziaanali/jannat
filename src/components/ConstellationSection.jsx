@@ -34,9 +34,9 @@ export default function ConstellationSection({ reducedMotion }) {
   ];
 
   return (
-    <section id="constellation" className="relative py-24 sm:py-36 px-4 max-w-5xl mx-auto text-center">
+    <section id="constellation" className="relative py-16 sm:py-36 px-4 max-w-5xl mx-auto text-center">
       {/* Background Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-pink-600/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[650px] h-[320px] sm:h-[650px] bg-pink-600/10 rounded-full blur-[130px] pointer-events-none" />
 
       {/* Chapter Badge */}
       <motion.div
@@ -44,7 +44,7 @@ export default function ConstellationSection({ reducedMotion }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill border border-pink-400/20 text-xs text-pink-300 mb-6"
+        className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-pink-400/20 text-[11px] sm:text-xs text-pink-300 mb-4 sm:mb-6"
       >
         <Sparkles className="w-3.5 h-3.5 text-pink-400" />
         <span>Chapter IV • The Heart in the Stars</span>
@@ -56,7 +56,7 @@ export default function ConstellationSection({ reducedMotion }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.1 }}
-        className="font-serif text-3xl sm:text-5xl lg:text-6xl text-pink-100 font-normal leading-tight"
+        className="font-serif text-2xl sm:text-5xl lg:text-6xl text-pink-100 font-normal leading-tight"
       >
         {siteConfig.constellation.headline}
       </motion.h2>
@@ -66,7 +66,7 @@ export default function ConstellationSection({ reducedMotion }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.2 }}
-        className="mt-3 text-base sm:text-lg text-pink-200/70 font-cormorant italic max-w-xl mx-auto"
+        className="mt-2.5 text-sm sm:text-lg text-pink-200/70 font-cormorant italic max-w-xl mx-auto"
       >
         {siteConfig.constellation.subheadline}
       </motion.p>
@@ -77,10 +77,10 @@ export default function ConstellationSection({ reducedMotion }) {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, delay: 0.3 }}
-        className="relative w-[280px] sm:w-[360px] h-[260px] sm:h-[320px] mx-auto my-12 flex items-center justify-center select-none"
+        className="relative w-[230px] sm:w-[360px] h-[200px] sm:h-[320px] mx-auto my-8 sm:my-12 flex items-center justify-center select-none"
       >
         {/* Subtle background cosmic cloud */}
-        <div className="absolute inset-0 bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 bg-pink-500/10 rounded-full blur-2xl pointer-events-none" />
 
         <svg
           viewBox="0 0 300 260"
@@ -138,8 +138,8 @@ export default function ConstellationSection({ reducedMotion }) {
 
         {/* Center Constellation Label */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
-          <Heart className="w-5 h-5 text-pink-400 fill-pink-400/40 mx-auto animate-pulse" />
-          <span className="text-[11px] font-cormorant italic text-pink-200/80 tracking-widest block mt-1">
+          <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-pink-400 fill-pink-400/40 mx-auto animate-pulse" />
+          <span className="text-[10px] sm:text-[11px] font-cormorant italic text-pink-200/80 tracking-widest block mt-1">
             Jannat's Star
           </span>
         </div>
@@ -151,13 +151,13 @@ export default function ConstellationSection({ reducedMotion }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.4 }}
-        className="max-w-2xl mx-auto space-y-4 px-4"
+        className="max-w-2xl mx-auto space-y-3 sm:space-y-4 px-2"
       >
-        <p className="font-serif text-xl sm:text-3xl text-pink-100 font-medium leading-relaxed">
+        <p className="font-serif text-lg sm:text-3xl text-pink-100 font-medium leading-relaxed">
           "{siteConfig.constellation.messagePrimary}"
         </p>
 
-        <p className="text-base sm:text-xl text-pink-200/75 font-cormorant italic leading-relaxed">
+        <p className="text-sm sm:text-xl text-pink-200/75 font-cormorant italic leading-relaxed">
           "{siteConfig.constellation.messageSecondary}"
         </p>
       </motion.div>
@@ -168,31 +168,31 @@ export default function ConstellationSection({ reducedMotion }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.55 }}
-        className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-lg mx-auto"
+        className="mt-8 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 max-w-sm sm:max-w-lg mx-auto w-full px-2"
       >
         {/* Option 1: "Can We Talk?" -> Opens prefilled WhatsApp draft */}
         <button
           onClick={handleOpenWhatsApp}
-          className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-600 via-pink-700 to-purple-800 hover:from-pink-500 hover:to-purple-700 text-white font-medium text-base border border-pink-300/40 shadow-xl shadow-pink-950/60 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 group"
+          className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-pink-600 via-pink-700 to-purple-800 hover:from-pink-500 hover:to-purple-700 text-white font-medium text-sm sm:text-base border border-pink-300/40 shadow-xl shadow-pink-950/60 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 group"
           id="can-we-talk-btn"
         >
-          <MessageCircle className="w-5 h-5 text-pink-200 group-hover:scale-110 transition-transform" />
+          <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-pink-200 group-hover:scale-110 transition-transform shrink-0" />
           <span>{siteConfig.constellation.chatButtonText}</span>
         </button>
 
         {/* Option 2: "Not right now" -> Respects her boundaries unconditionally */}
         <button
           onClick={() => setShowRespectModal(true)}
-          className="w-full sm:w-auto px-7 py-4 rounded-full glass-card border border-white/10 hover:border-pink-400/30 text-pink-200/80 hover:text-white font-medium text-base hover:bg-white/5 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5"
+          className="w-full sm:w-auto px-6 sm:px-7 py-3.5 sm:py-4 rounded-full glass-card border border-white/10 hover:border-pink-400/30 text-pink-200/80 hover:text-white font-medium text-sm sm:text-base hover:bg-white/5 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
           id="not-right-now-btn"
         >
-          <HeartHandshake className="w-4 h-4 text-pink-400" />
+          <HeartHandshake className="w-4 h-4 text-pink-400 shrink-0" />
           <span>{siteConfig.constellation.respectButtonText}</span>
         </button>
       </motion.div>
 
       {/* Helper caption: no auto-sending, no pressure */}
-      <p className="mt-5 text-xs text-pink-300/50 font-sans tracking-wide">
+      <p className="mt-4 sm:mt-5 text-[11px] sm:text-xs text-pink-300/50 font-sans tracking-wide px-3">
         Opens a draft in WhatsApp only if you choose to. Never auto-sent.
       </p>
 
@@ -203,7 +203,7 @@ export default function ConstellationSection({ reducedMotion }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-xl"
             onClick={() => setShowRespectModal(false)}
           >
             <motion.div
@@ -211,42 +211,42 @@ export default function ConstellationSection({ reducedMotion }) {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 280 }}
-              className="relative max-w-lg w-full rounded-3xl p-8 sm:p-10 glass-card border border-pink-400/40 bg-[#160a2c]/95 shadow-2xl text-center"
+              className="relative max-w-sm sm:max-w-lg w-full rounded-2xl sm:rounded-3xl p-6 sm:p-10 glass-card border border-pink-400/40 bg-[#160a2c]/95 shadow-2xl text-center"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setShowRespectModal(false)}
-                className="absolute top-5 right-5 p-2 rounded-full text-pink-300/70 hover:text-white hover:bg-white/10 transition-colors"
+                className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full text-pink-300/70 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="Close"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
 
-              <div className="w-14 h-14 rounded-full bg-pink-500/15 border border-pink-400/30 flex items-center justify-center text-pink-300 mx-auto mb-5">
-                <Heart className="w-7 h-7 text-pink-400 fill-pink-400/30" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pink-500/15 border border-pink-400/30 flex items-center justify-center text-pink-300 mx-auto mb-4 sm:mb-5">
+                <Heart className="w-6 h-6 sm:w-7 sm:h-7 text-pink-400 fill-pink-400/30" />
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl text-pink-100 font-medium mb-4">
+              <h3 className="font-serif text-xl sm:text-3xl text-pink-100 font-medium mb-3 sm:mb-4">
                 {siteConfig.constellation.respectResponse.title}
               </h3>
 
-              <p className="text-sm sm:text-base text-pink-200/80 leading-relaxed font-sans mb-6">
+              <p className="text-xs sm:text-base text-pink-200/80 leading-relaxed font-sans mb-4 sm:mb-6">
                 {siteConfig.constellation.respectResponse.message}
               </p>
 
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/5 mb-6">
+              <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/5 mb-4 sm:mb-6">
                 <p className="text-xs sm:text-sm text-pink-200/90 font-cormorant italic">
                   {siteConfig.constellation.respectResponse.quote}
                 </p>
               </div>
 
-              <p className="text-xs text-pink-300/70 font-sans tracking-wide">
+              <p className="text-[11px] sm:text-xs text-pink-300/70 font-sans tracking-wide">
                 {siteConfig.constellation.respectResponse.footer}
               </p>
 
               <button
                 onClick={() => setShowRespectModal(false)}
-                className="mt-6 px-6 py-2.5 rounded-full bg-pink-500/20 hover:bg-pink-500/30 text-pink-200 text-xs font-medium border border-pink-400/30 transition-colors"
+                className="mt-5 sm:mt-6 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-pink-500/20 hover:bg-pink-500/30 text-pink-200 text-xs font-medium border border-pink-400/30 transition-colors"
               >
                 Close with peace
               </button>

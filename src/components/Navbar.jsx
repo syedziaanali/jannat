@@ -38,20 +38,20 @@ export default function Navbar({ reducedMotion, setReducedMotion }) {
           : 'py-5 bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 flex items-center justify-between">
         {/* Brand / Names */}
         <a
           href="#opening"
-          className="group flex items-center gap-2.5 text-pink-100 hover:text-pink-300 transition-colors"
+          className="group flex items-center gap-2 sm:gap-2.5 text-pink-100 hover:text-pink-300 transition-colors"
         >
-          <div className="w-8 h-8 rounded-full bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
-            <Heart className="w-4 h-4 fill-pink-400/30 group-hover:fill-pink-400 transition-colors" />
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+            <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-pink-400/30 group-hover:fill-pink-400 transition-colors" />
           </div>
           <div className="flex flex-col">
-            <span className="font-serif tracking-wide text-sm sm:text-base font-medium">
+            <span className="font-serif tracking-wide text-xs sm:text-base font-medium">
               {siteConfig.girlfriendName} <span className="text-pink-400">&</span> {siteConfig.boyfriendName}
             </span>
-            <span className="text-[10px] text-pink-300/60 font-sans tracking-widest uppercase">
+            <span className="text-[9px] sm:text-[10px] text-pink-300/60 font-sans tracking-widest uppercase">
               A Quiet Universe
             </span>
           </div>
