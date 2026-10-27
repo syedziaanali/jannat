@@ -4,10 +4,10 @@
  * =======================================================================
  * 
  * ZIAAN, YOU CAN CUSTOMIZE ALL CONTENT IN THIS FILE EASILY:
- * - Update your names, dates, memories, photos, and messages.
+ * - Update your names and messages.
  * - Change the WhatsApp phone number (with country code, e.g. '919876543210')
  * - Change background music or add your own audio file.
- * - Customize the letter or memories anytime.
+ * - Customize the heartfelt letter anytime.
  */
 
 export const siteConfig = {
@@ -17,7 +17,7 @@ export const siteConfig = {
   subtitle: "A little universe made with love, accountability, and a quiet heart that will always listen.",
   
   // WhatsApp Configuration (Option for Jannat to reach out if she feels ready)
-  // Format: international format without '+' or spaces, e.g. "919876543210" or leave empty to prompt for phone
+  // Format: international format without '+' or spaces, e.g. "919876543210"
   whatsapp: {
     phoneNumber: "919876543210", // 🔴 REPLACE with your actual WhatsApp number (e.g. 91xxxxxxxxxx)
     prefilledMessage: "Hey Ziaan... I saw what you made. Can we talk?",
@@ -36,71 +36,10 @@ export const siteConfig = {
   hero: {
     greeting: "Hey Jannat... ❤️",
     leadMessage: "I made a little universe for someone who means the world to me.",
-    buttonText: "Open My Heart",
-    scrollHint: "Scroll gently to explore our journey",
+    scrollHint: "Scroll gently to continue",
   },
 
-  // Section 2: Our Story (Cinematic Timeline)
-  // Headline: "Every little moment with you matters to me."
-  // Editable photo cards with dates and memory notes
-  timeline: {
-    headline: "Every little moment with you matters to me.",
-    subheadline: "These aren't just dates on a calendar; they are moments where my heart felt completely at home.",
-    memories: [
-      {
-        id: 1,
-        date: "The Day We First Spoke",
-        tag: "Where it all began",
-        title: "The First Spark",
-        description: "That conversation changed everything for me. I remember how easily hours slipped away like minutes, and how right it felt just to hear you talk.",
-        image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80",
-        caption: "A quiet beginning to something truly beautiful.",
-        location: "Our first conversations",
-      },
-      {
-        id: 2,
-        date: "Our First Late Night Call",
-        tag: "Under the midnight sky",
-        title: "Whispers in the Dark",
-        description: "When the entire world went quiet, it was just your voice. We laughed over silly things, shared secret thoughts, and I knew right then how precious you are.",
-        image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80",
-        caption: "Finding solace in your laughter.",
-        location: "Endless hours under the stars",
-      },
-      {
-        id: 3,
-        date: "That Unforgettable Shared Laugh",
-        tag: "Pure warmth",
-        title: "When You Smiled So Brightly",
-        description: "I took a mental photograph of the way your eyes crinkle when you genuinely laugh. That expression has been my favorite place in the world ever since.",
-        image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=80",
-        caption: "Your smile lights up even my darkest days.",
-        location: "A moment I'll forever hold dear",
-      },
-      {
-        id: 4,
-        date: "A Day You Stood By Me",
-        tag: "Unconditional kindness",
-        title: "Your Gentle Grace",
-        description: "When things were heavy or chaotic, your presence brought calm. You have this rare, soft superpower to make people feel safe, and I will never take that for granted.",
-        image: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1000&q=80",
-        caption: "You taught me what warmth truly feels like.",
-        location: "Grateful for your soft heart",
-      },
-      {
-        id: 5,
-        date: "Today & Every Day Ahead",
-        tag: "Holding space",
-        title: "No Matter Where Life Leads",
-        description: "Whatever you are feeling right now, every memory we've shared remains sacred to me. My gratitude for having you in my life will never fade.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-        caption: "Always here with love and understanding.",
-        location: "Wherever you are",
-      }
-    ]
-  },
-
-  // Section 3: What I Adore About You
+  // Chapter I: What I Adore About You
   // Interactive glowing cards revealing loving messages
   adorations: {
     headline: "What I Adore About You",
@@ -154,7 +93,7 @@ export const siteConfig = {
     ]
   },
 
-  // Section 4: What I Wish I Did Better (Accountability & Sincere Reflection)
+  // Chapter II: What I Wish I Did Better (Accountability & Sincere Reflection)
   // Sincere, humble, no claiming specific mistakes as absolute facts, no defensive tone.
   reflection: {
     headline: "What I Wish I Did Better",
@@ -185,7 +124,7 @@ export const siteConfig = {
     closingQuote: "I don't expect things to magically fix themselves overnight. I only want you to know that I see you, I hear you, and your peace will always matter more to me than my pride."
   },
 
-  // Section 5: A Letter From My Heart
+  // Chapter III: A Letter From My Heart
   // Interactive envelope with wax seal & handwritten Hinglish letter
   letter: {
     envelopePrompt: "Click the seal to unfold what's inside my heart",
@@ -197,7 +136,7 @@ export const siteConfig = {
     date: "Under the quiet stars"
   },
 
-  // Section 6: One Last Thing (The Constellation & The Gentle Choice)
+  // Chapter IV: One Last Thing (The Constellation & The Gentle Choice)
   constellation: {
     headline: "One Last Thing...",
     subheadline: "Look closely at the stars above—they form a constellation that will always hold your name.",
@@ -211,38 +150,6 @@ export const siteConfig = {
       quote: "\"Love doesn't demand its own way; it protects, trusts, and holds gentle grace.\"",
       footer: "Always wishing you peace, happiness, and all the light in the world. — Ziaan ❤️"
     }
-  },
-
-  // Photo Gallery (Polaroid Moments)
-  gallery: {
-    headline: "Polaroids of My Favorite Memories",
-    subheadline: "Click any photo to look a little closer at the memories that bring me joy.",
-    photos: [
-      {
-        url: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80",
-        caption: "Your infectious warmth on an ordinary day.",
-        date: "Memory #01",
-        rotation: "-rotate-2"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80",
-        caption: "Coffee, soft sunlight, and your smile.",
-        date: "Memory #02",
-        rotation: "rotate-3"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80",
-        caption: "A quiet walk where we talked about everything.",
-        date: "Memory #03",
-        rotation: "-rotate-1"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=800&q=80",
-        caption: "Watching the sky change colors together.",
-        date: "Memory #04",
-        rotation: "rotate-2"
-      }
-    ]
   },
 
   // Footer
