@@ -19,7 +19,7 @@ export const siteConfig = {
   // WhatsApp Configuration (Option for Jannat to reach out if she feels ready)
   // Format: international format without '+' or spaces, e.g. "919876543210"
   whatsapp: {
-    phoneNumber: "919876543210", // 🔴 REPLACE with your actual WhatsApp number (e.g. 91xxxxxxxxxx)
+    phoneNumber: "917507274276", // Ziaan's WhatsApp number
     prefilledMessage: "Hey Ziaan... I saw what you made. Can we talk?",
   },
 
